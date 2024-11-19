@@ -1,3 +1,3 @@
-## MCU I<sup>2</sup>C Master Device - Led Matrix Control
+## MCU I<sup>2</sup>C Master Device - LEDs Matrix Control
 
 <br/>
