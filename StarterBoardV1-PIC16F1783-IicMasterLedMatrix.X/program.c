@@ -82,9 +82,9 @@ void programLoop(void) {
     
     led1 = 0;
     lcd_Goto(1, 0);
-    lcd_PrintDigitInt32(i2c_MasterByteReadSlave(_Address_LMSB1), 2, false, true); // Read slave switches data from device 1 and write to LCD
+    lcd_PrintDigitInt32(i2c_MasterByteReadSlave(_Address_LMSB1), 2, false, true); // Read switches data from device 1 and write to LCD
     lcd_Goto(1, 4);
-    lcd_PrintDigitInt32(i2c_MasterByteReadSlave(_Address_LMSB2), 2, false, true); // Read slave switches data from device 2 and write to LCD
+    lcd_PrintDigitInt32(i2c_MasterByteReadSlave(_Address_LMSB2), 2, false, true); // Read switches data from device 2 and write to LCD
     delay_ms(200);
     
     led1 = 1;
