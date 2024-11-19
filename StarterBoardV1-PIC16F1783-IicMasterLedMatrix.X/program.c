@@ -76,15 +76,15 @@ void programLoop(void) {
     // Alternately change LEDs pattern on slave boards
     
     led1 = 1;
-    i2c_MasterByteWriteSlave(_Address_LMSB1, 0xAA); // Write data to LEDs matrix slave 1
-    i2c_MasterByteWriteSlave(_Address_LMSB2, 0x0F); // Write data to LEDs matrix slave 2
+    i2c_MasterByteWriteSlave(_Address_LMSB1, 0xAA); // Write data to LEDs matrix device 1
+    i2c_MasterByteWriteSlave(_Address_LMSB2, 0x0F); // Write data to LEDs matrix device 2
     delay_ms(200);
     
     led1 = 0;
     lcd_Goto(1, 0);
-    lcd_PrintDigitInt32(i2c_MasterByteReadSlave(_Address_LMSB1), 2, false, true); // Read slave switches data from slave 1 and write to LCD
+    lcd_PrintDigitInt32(i2c_MasterByteReadSlave(_Address_LMSB1), 2, false, true); // Read slave switches data from device 1 and write to LCD
     lcd_Goto(1, 4);
-    lcd_PrintDigitInt32(i2c_MasterByteReadSlave(_Address_LMSB2), 2, false, true); // Read slave switches data from slave 2 and write to LCD
+    lcd_PrintDigitInt32(i2c_MasterByteReadSlave(_Address_LMSB2), 2, false, true); // Read slave switches data from device 2 and write to LCD
     delay_ms(200);
     
     led1 = 1;
